@@ -34,6 +34,7 @@ template <typename T>
 void Array<T>::add(T val) {
   if (_size == 0) {
     _list = (T*) malloc(sizeof(T)); // allocate pointer
+    _list = new T;
     _list[0] = val; // put val at beginning
     _size++;
   }
